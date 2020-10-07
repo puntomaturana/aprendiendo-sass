@@ -1,0 +1,18 @@
+@mixin button {
+  border-radius: 5px;
+  min-width: 120px;
+  background-color: $primario;
+  color: white;
+}
+
+@mixin radius($radio) {
+  -webkit-border-radius: $radio;
+  -ms-border-radius: $radio;
+  border-radius: $radio;
+}
+
+@mixin transform($propiedad) {
+  -webkit-transform: $propiedad;
+  -ms-border-radius: $propiedad;
+  transform: $propiedad;
+}

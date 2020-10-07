@@ -1,0 +1,40 @@
+header {
+  background-color: $primario;
+
+  img.logo {
+    width: 150px;
+  }
+
+  a.menu {
+    color: white;
+  }
+
+  .link {
+    color: $primario;
+  }
+
+  .btn {
+    @include button;
+  }
+}
+
+.msg {
+  @include radius(5px);
+
+  p {
+    color: $primario;
+    @include transform(rotate(180deg));
+
+    span {
+      background-color: yellow;
+
+      i {
+        font-size: 21px;
+
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,13 @@
 // asi se hace en css
 //@import url('jasfsa.css');
+//este es un comentario de una línea
+/*este es un
+comentario de varias
+lineas*/
 
-@import 'bootstrap/bootstrap';
+//@import 'bootstrap/bootstrap';
+@import '_variables';
+@import '_mixins';
+@import '_definitions';
 @import '_header';
 @import '_footer';
