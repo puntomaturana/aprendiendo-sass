@@ -13,11 +13,21 @@ body p {
   text-align: justify;
 }
 
-header {
-  background-color: #D01010;
+.text-center, footer p, header a.menu {
+  text-align: center;
 }
+
+.color-white, footer p {
+  color: white;
+}
+
 header img.logo {
   width: 150px;
+}
+@media (max-width: 720px) {
+  header img.logo {
+    width: 100%;
+  }
 }
 header a.menu {
   color: white;
@@ -25,11 +35,50 @@ header a.menu {
 header .link {
   color: #D01010;
 }
+@media (max-width: 720px) {
+  header .link {
+    color: blue;
+  }
+}
 header .btn {
   border-radius: 5px;
   min-width: 120px;
   background-color: #D01010;
   color: white;
+}
+header .btn:hover {
+  background-color: green;
+}
+@media (max-width: 450px) {
+  header .btn:hover {
+    background-color: blue;
+  }
+}
+header .btn:active {
+  background-color: yellow;
+}
+header .btn:focus {
+  background-color: pink;
+}
+
+.input {
+  background-color: #F0F0F0;
+}
+.input:focus {
+  background-color: red;
+}
+
+.header {
+  display: flex;
+}
+.header__logo {
+  width: 200px;
+}
+.header__menu {
+  color: green;
+}
+.header__menu--rojo {
+  color: red;
 }
 
 .msg {

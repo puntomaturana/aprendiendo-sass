@@ -1,23 +1,78 @@
 header {
-  background-color: $primario;
-
+  ///background-color: $primario;
   img.logo {
     width: 150px;
+		@extend .img-fluid !optional;
+
+		@media (max-width: $tablet) {
+			width: 100%;
+		}
   }
 
   a.menu {
     color: white;
+		@extend .text-center;
   }
 
   .link {
+		//aqui hago referencia a la variable
     color: $primario;
+
+		@media (max-width: $tablet) {
+			color: blue;
+		}
   }
 
   .btn {
+		//aqui uso mixins
     @include button;
+
+		// referencia al padre con &
+		&:hover {
+			background-color: green;
+
+			@media (max-width: $movil) {
+				background-color: blue;
+			}
+		}
+
+		&:active {
+			background-color: yellow;
+		}
+
+		&:focus {
+			background-color: pink;
+		}
   }
 }
 
+//ejemplo input
+.input {
+	background-color: #F0F0F0;
+	//estado del elemento con &
+	&:focus {
+		background-color: red;
+	}
+}
+
+//anidacion de elementos
+.header {
+	display: flex;
+
+	&__logo {
+		width: 200px;
+	}
+
+	&__menu {
+		color: green;
+
+		&--rojo {
+			color: red;
+		}
+	}
+}
+
+//anidacion y uso de mixins
 .msg {
   @include radius(5px);
 
@@ -37,4 +92,8 @@ header {
       }
     }
   }
+}
+
+@media (max-width: $tablet) and (min-width: $movil) {
+	//todo lo que esta aqui se ejecuta hasta que la pantalla tiene un ancho maximo de $tablet y desde que el ancho minimo de $movil
 }
