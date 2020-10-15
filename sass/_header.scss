@@ -1,4 +1,4 @@
-header {
+/*header {
   ///background-color: $primario;
   img.logo {
     width: 150px;
@@ -96,4 +96,82 @@ header {
 
 @media (max-width: $tablet) and (min-width: $movil) {
 	//todo lo que esta aqui se ejecuta hasta que la pantalla tiene un ancho maximo de $tablet y desde que el ancho minimo de $movil
+}
+*/
+
+.header {
+	background-color: $gris;
+	color: white;
+	padding: 30px;
+
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__logo {
+		flex: 0 0 20%;
+	}
+
+	&__menu {
+		flex: 1 1 auto;
+
+		.search {
+			align-items: center;
+			display: flex;
+
+			&__input {
+				display: flex;
+				flex: 1 1 auto;
+
+				input {
+					@extend .form-control;
+					border-top-right-radius: 0;
+					border-bottom-right-radius: 0;
+				}
+
+				button {
+					background-color: $amarillo;
+					border: none;
+					border-top-left-radius: 0;
+					border-bottom-left-radius: 0;
+					@extend .btn;
+				}
+			}
+
+			&__language {
+				margin-left: 30px;
+			}
+		}
+
+		.menu {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			margin-top: 20px;
+
+			ul {
+				display: flex;
+				list-style: none;
+				padding: 0;
+				margin: 0;
+
+				li {
+					font-size: 18px;
+					padding: 15px;
+					font-weight: bold;
+				}
+			}
+
+			&__shop {
+				a {
+					color: white;
+					font-size: 10px;
+					padding: 15px;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
 }

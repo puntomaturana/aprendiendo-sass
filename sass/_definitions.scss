@@ -1,4 +1,4 @@
-body {
+/*body {
   font-family: $font;
   font-size: 14px;
 
@@ -18,4 +18,118 @@ body {
 
 .color-white {
 	color: white;
+}*/
+
+.slider {
+	background-color: #333;
+
+	img {
+		@extend .img-fluid;
+	}
+}
+
+.sale {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 30px;
+	@extend .container;
+
+	&__box {
+		flex: 0 0 50%;
+		max-width: 50%;
+
+		img {
+			@extend .img-fluid;
+		}
+	}
+}
+
+.accessories {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 30px;
+	@extend .container;
+
+	&__box {
+		flex: 0 0 25%;
+		max-width: 25%;
+
+		&--title {
+			text-align: center;
+
+			h2 {
+				color: black;
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+
+			p {
+				margin-top: 15px;
+			}
+
+			a {
+				border: 2px solid $amarillo;
+				@extend .btn;
+				font-weight: bold;
+				text-transform: uppercase;
+				border-radius: 0;
+				margin-top: 15px;
+			}
+		}
+
+		img {
+			@extend .img-fluid;
+		}
+
+		h3.title {
+			color: black;
+			font-weight: bold;
+			font-size: 14px;
+			margin-bottom: 0;
+			margin-top: 15px;
+			text-transform: uppercase;
+		}
+
+		a.buy {
+			color: black;
+			font-size: 12px;
+			text-decoration: underline;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.the_icons {
+	background-image: url('https://catcl.vtexassets.com/assets/vtex.file-manager-graphql/images/9f1fc5bd-177c-4ef2-91e9-75b41c359cbc___e160ef3c0c3e70a511d7874df19e875d.jpg');
+	background-size: cover;
+	min-height: 350px;
+	margin-top: 30px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	&__info {
+		flex: 0 0 25%;
+		max-width: 25%;
+		padding-right: 15px;
+
+		h2 {
+			color: white;
+			font-weight: bold;
+		}
+
+		p {
+			color: white;
+		}
+
+		a {
+			background-color: $amarillo;
+			color: black;
+			font-weight: bold;
+			text-transform: uppercase;
+			@extend .btn;
+			border-radius: 0;
+		}
+	}
 }
